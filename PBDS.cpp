@@ -7,8 +7,12 @@
 
 using namespace std;
 using namespace __gnu_pbds;
+query 
+// find_by_order to find element with index
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key unique only
+typedef tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key 2 2both will be stored
+typedef tree<int, null_type, greater<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key dec order
 
-typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds; // find_by_order, order_of_key
 
 int main() {
 	pbds A; // declaration
